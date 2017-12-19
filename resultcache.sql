@@ -1,0 +1,9 @@
+show parameter result;
+
+SELECT dbms_result_cache.status() FROM dual;
+
+SELECT ID, TYPE, CREATION_TIMESTAMP, BLOCK_COUNT, COLUMN_COUNT, PIN_COUNT, ROW_COUNT 
+FROM V$RESULT_CACHE_OBJECTS 
+WHERE CACHE_ID like '%';
+
+
