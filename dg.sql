@@ -1,3 +1,4 @@
+set lines 180
 col inst_id for 999999
 col protection_mode for a20    
 col protection_level for a15
