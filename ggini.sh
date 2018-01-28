@@ -6,5 +6,4 @@ chmod +x gg*.kk
 cp ./gg*.kk $GG_HOME
 cd $GG_HOME
 find -type f -name 'gg*.kk' | while read f; do mv "$f" "${f%.kk}"; done
-echo "cd $GG_HOME"
-
+echo "Current OGG Home is : $GG_HOME"
