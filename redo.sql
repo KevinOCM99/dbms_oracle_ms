@@ -4,6 +4,7 @@ order by group#;
 
 col IS_RECOVERY_DEST_FILE heading IN_FRA for a6
 col member for a59
+col status for a15
 select GROUP#,type,IS_RECOVERY_DEST_FILE ,status, member
 from v$logfile order by group#;
 
