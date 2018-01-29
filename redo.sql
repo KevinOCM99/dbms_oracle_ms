@@ -1,3 +1,4 @@
+col status for a15
 select group#,sequence#,members,status,ARCHIVED, FIRST_CHANGE#, NEXT_CHANGE# 
 from v$log
 order by group#;
