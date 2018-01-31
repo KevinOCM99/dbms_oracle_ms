@@ -1,4 +1,4 @@
-col Instance_Name for a14 heading Instance_Name
+col Instance_Name for a13 heading Instance_Name
 col Started_At for a20
 col "Database_Uptime" for a40
 col current_scn for 999999999999999
