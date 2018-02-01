@@ -1,3 +1,4 @@
+--Usage: @loopc uptime 2 5
 set feed off
 set head off
 set echo off
@@ -15,7 +16,7 @@ select 'host echo' as cmd from dual
 union all
 select 'host source p_bar.kk &2' as cmd from dual
 union all
-select 'clear scr' as cmd from dual
+select '--clear scr' as cmd from dual
 ) , (select rownum from dual connect by level <=&3) ;
 spool off
 set term on
@@ -26,4 +27,3 @@ set head on
 clear scr
 @myloop_tmp.sql
 host rm myloop_tmp.sql
-
