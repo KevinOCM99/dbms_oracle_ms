@@ -7,5 +7,6 @@ order by df.FILE#;
 
 select file#,change# from v$recover_file;
 
-select current_scn,dbms_flashback.get_system_change_number from v$database;
+SELECT NAME, SCN, TIME, DATABASE_INCARNATION#,GUARANTEE_FLASHBACK_DATABASE,STORAGE_SIZE
+FROM V$RESTORE_POINT;
 
