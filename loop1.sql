@@ -13,6 +13,8 @@ select '@' || '&1'  as cmd from dual
 union all
 select 'host echo' as cmd from dual
 union all
+select 'host source p_delay.kk &2' as cmd from dual
+union all
 select 'clear scr' as cmd from dual
 ) , (select rownum from dual connect by level <=&3) ;
 spool off
