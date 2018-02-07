@@ -7,5 +7,6 @@ col terminal for a20;
 col sess_id for a20;
 select username,osuser,machine,'''' || to_char(sid) || ',' || serial# || ',@' || INST_ID || '''' sess_id,terminal,program
 from gv$session
-where username like upper('%&name%')
+where username like upper('%&1%')
 order by 1;
+undefine 1;
