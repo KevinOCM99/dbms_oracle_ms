@@ -9,4 +9,3 @@ select username,osuser,machine,'''' || to_char(sid) || ',' || serial# || ',@' ||
 from gv$session
 where username like upper('%&1%')
 order by 1;
-undefine 1;
