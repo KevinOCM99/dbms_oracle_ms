@@ -1,5 +1,3 @@
-select 'Show log level for schema level, next...gglogt' name from dual;
-
 SELECT schema_name,
   supplemental_log_data_pk AS "PK",
   supplemental_log_data_pk AS "UI",
