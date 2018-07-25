@@ -1,7 +1,8 @@
-set lines 120
-col property_name for a35;
-col PROPERTY_VALUE for a30;
+set lines 180
+col property_name for a45;
+col PROPERTY_VALUE for a45;
 col DESCRIPTION for a50;
 SELECT *
 FROM database_properties                
-WHERE property_name = 'DEFAULT_TBS_TYPE';
+WHERE upper(property_name) like '%&prop_name%'
+order by 1;
