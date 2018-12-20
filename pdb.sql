@@ -1,5 +1,5 @@
 set lines 180
-col name for a20;
+col name for a30;
 col open_mode for a20;
 col con_id for 999;
 col create_scn for 9999999999999999;
