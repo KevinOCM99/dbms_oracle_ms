@@ -1,5 +1,5 @@
 col owner for a30;
-col credentail_name for a45;
+col credential_name for a45;
 col username for a30;
 col enabled for a10;
 select owner,credential_name,username,enabled
