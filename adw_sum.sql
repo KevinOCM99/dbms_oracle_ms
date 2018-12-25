@@ -1,3 +1,4 @@
+@cls
 --set timing on;
 --set echo on;
 --instance
