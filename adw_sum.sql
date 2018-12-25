@@ -1,4 +1,4 @@
-set timing on;
+--set timing on;
 --set echo on;
 --instance
 col INSTANCE_NUMBER for 999 heading AID;
@@ -33,5 +33,5 @@ col total_size_MB for 999999;
 select con_id, name, open_mode,create_scn,total_size/1024/1024 total_size_MB,guid
 from v$pdbs;
 --
-set timing off;
+--set timing off;
 --set echo off;
