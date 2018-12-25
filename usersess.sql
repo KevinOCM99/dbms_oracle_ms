@@ -5,7 +5,8 @@ col machine for a20;
 col program for a40;
 col terminal for a20;
 col sess_id for a20;
-select username,osuser,machine,'''' || to_char(sid) || ',' || serial# || ',@' || INST_ID || '''' sess_id,terminal,program
+col resource_consumer_group for a15 heading CONSUMER_GROUP;
+select username,osuser,machine,'''' || to_char(sid) || ',' || serial# || ',@' || INST_ID || '''' sess_id,terminal,resource_consumer_group,program
 from gv$session
 where username like upper('%&9%')
 order by 1;
