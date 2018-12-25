@@ -1,5 +1,5 @@
 set timing on;
-set echo on;
+--set echo on;
 --instance
 col INSTANCE_NUMBER for 999 heading AID;
 col parallel for a8;
@@ -34,4 +34,4 @@ select con_id, name, open_mode,create_scn,total_size/1024/1024 total_size_MB,gui
 from v$pdbs;
 --
 set timing off;
-set echo off;
+--set echo off;
