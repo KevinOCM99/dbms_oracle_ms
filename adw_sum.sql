@@ -18,7 +18,7 @@ SELECT directory_name, directory_path
 FROM   dba_directories order by 1;
 --tbs and data file
 col tablespace_name for a20;
-col file_name for a85;
+col file_name for a105;
 select tablespace_name,file_name from dba_data_files order by 1;
 --version
 select * from v$version;
