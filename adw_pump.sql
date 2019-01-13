@@ -1,6 +1,6 @@
 col owner_name for a20
 col job_name for a30
-col operation for a10
+col operation for a30
 col job_mode for a30
 col state for a15
 col degree for 99999 for 99 heading PX
