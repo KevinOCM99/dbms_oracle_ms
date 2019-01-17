@@ -52,7 +52,7 @@ DBMS_CLOUD.copy_data(
 operation_id => job_id,
 table_name => 'CUSTOMERS_KK',
 credential_name => 'OBJ_STORE_CRED',
-file_uri_list => 'https://swiftobjectstorage.us-ashburn-1.oraclecloud.com/v1/kkwizard01/ADWCLab/customers.csv',
+file_uri_list => 'https://swiftobjectstorage.us-ashburn-1.oraclecloud.com/v1/kkwizard01/ADWCLab/customers_kk.csv',
 schema_name => 'ADMIN',
 format => json_object('delimiter' value '|', 'recorddelimiter' value '''\\n''', 'dateformat' value 'YYYY-MM-DD-HH24-MI-SS', 'quote' value '\"', 'rejectlimit' value '0', 'trimspaces' value 'rtrim', 'ignoreblanklines' value 'true', 'ignoremissingcolumns' value 'true')); 
 DBMS_CLOUD.delete_operation(id => job_id);
