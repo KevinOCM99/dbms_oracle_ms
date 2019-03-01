@@ -1,0 +1,15 @@
+col sid for 99999
+col serial# for 99999
+col OPNAME for a30
+col SOFAR for 99999999
+col TOTALWORK for 99999999
+col COMPLETE for 999.00
+col INST_ID for 99
+SELECT INST_ID, SID,       SERIAL#,
+       opname,       SOFAR,
+       TOTALWORK,       ROUND(SOFAR / TOTALWORK * 100, 2) COMPLETE
+  FROM GV$SESSION_LONGOPS
+ WHERE TOTALWORK != 0
+   AND SOFAR != TOTALWORK
+ order by 1;
+
