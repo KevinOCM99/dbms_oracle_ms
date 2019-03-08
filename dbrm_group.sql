@@ -1,5 +1,5 @@
 COLUMN status FORMAT A10
-COLUMN comments FORMAT A50
+COLUMN comments FORMAT A70
 col consumer_group for a30
 SELECT consumer_group,
        status,
