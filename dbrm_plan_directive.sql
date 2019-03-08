@@ -1,5 +1,5 @@
 col plan for a30
-col group_or_subplan for a20
+col group_or_subplan for a30
 col cpu_p1 for 999999
 col cpu_p2 for 999999
 col cpu_p3 for 999999
