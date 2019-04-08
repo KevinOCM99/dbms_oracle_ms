@@ -1,3 +1,4 @@
+ACCEPT wal_loc prompt 'Enter Wallet Location: '
 !mv &wal_loc/cwallet.sso &wal_loc/cwallet.sso.orig
 administer key management set keystore close;
 administer key management set keystore open identified by "WelcomE__1234567" container=all;
