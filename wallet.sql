@@ -1,3 +1,4 @@
+set pages 999
 set lines 180;
 col WRL_TYPE for a20;
 col WRL_PARAMETER for a59;
