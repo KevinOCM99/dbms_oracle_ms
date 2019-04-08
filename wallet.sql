@@ -1,6 +1,6 @@
 set lines 180;
 col WRL_TYPE for a20;
-col WRL_PARAMETER for a50;
+col WRL_PARAMETER for a59;
 col STATUS for a20;
 col WALLET_TYPE for a20;
 col WALLET_ORDER for a12
