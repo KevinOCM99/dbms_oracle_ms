@@ -18,14 +18,11 @@ order by 1;
 col first_time for a20;
 col FIRST_CHANGE# for 9999999999999999999;
 
-select distinct THREAD#,FIRST_CHANGE#,FIRST_TIME,SEQUENCE#,DEST_ID,APPLIED
+select THREAD#,FIRST_CHANGE#,FIRST_TIME,SEQUENCE#,DEST_ID,APPLIED
 from gv$archived_log
-where to_char(THREAD#) || 'kk' || to_char(SEQUENCE#) || 'kk' || to_char(resetlogs_change#) in
-(select to_char(THREAD#) || 'kk' || to_char(max(SEQUENCE#)) || 'kk' || to_char(max(resetlogs_change#))
- from (select THREAD#,SEQUENCE#,resetlogs_change# from gv$archived_log
- where applied= 'YES' and resetlogs_change#=(select max(resetlogs_change#) from v$archived_log))
- group by THREAD#
-) 
-and applied= 'YES' 
+where sequence# = (select max(sequence#)
+from gv$archived_log
+where applied= 'YES')
 order by THREAD#,FIRST_CHANGE#,DEST_ID;
+
 
