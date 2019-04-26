@@ -3,13 +3,13 @@ col inst_id for 999999
 col protection_mode for a20    
 col protection_level for a20
 col remote_archive for a10
-col database_role for a15
-col dataguard_broker for a15               
+col database_role for a29
+col dataguard_broker for a11 heading DG_BROKER 
 col guard_status for a10 heading GUARD
 col switchover_status for a15 heading CONV_TO
 select INST_ID,protection_mode,
 --protection_level,
-remote_archive,database_role,
+remote_archive,database_role || '(' || (select case value when 'TRUE' then 'Cluster-DB' else 'Non-Cluster' end  from v$option where parameter = 'Real Application Clusters') || ')' database_role,
        dataguard_broker,guard_status,switchover_status
 from gv$database
 order by 1;
