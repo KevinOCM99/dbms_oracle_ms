@@ -1,4 +1,4 @@
-set lines 120;
+set lines 120 pages 999
 col PID for 99999 
 col process for a10
 col client_pid for a10
