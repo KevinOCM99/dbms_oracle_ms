@@ -1,0 +1,4 @@
+set lines 120;
+col DB_UNIQUE_NAME for a30;
+col DEST_ROLE for a30;
+select DB_UNIQUE_NAME,DEST_ROLE from V$DATAGUARD_CONFIG;
