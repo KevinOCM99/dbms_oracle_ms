@@ -7,13 +7,18 @@ col module for a20;
 col program for a15;
 col client_charset for a10;
 col client_driver for a10;
-col client_conn for a20;
+col client_conn for a4 head CONN;
 col service_name for a15;
 col server for a1;
+col sid for 99999;
+col serial# for 99999;
+col status for a10;
 SELECT 
 /* a.sid, a.serial#, */ b.username, 
-a.client_version, a.osuser, 
-b.machine, b.module, b.program, 
+a.client_version, a.osuser,
+b.sid, b.serial#,b.status,
+b.machine, b.module, 
+--b.program, 
 a.client_charset , a.client_driver, 
 substr(a.client_connection, 0, 4) client_conn, 
 b.service_name, 
