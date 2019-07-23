@@ -13,11 +13,11 @@ col server for a1;
 col sid for 99999;
 col serial# for 99999;
 col status for a10;
-col lastddlMin for 99999.99;
+col lastCallMin for 99999.99;
 SELECT 
 /* a.sid, a.serial#, */ b.username, 
 a.client_version, a.osuser,
-b.sid, b.serial#,b.status,b.last_call_et/60.00 lastddlMin,
+b.sid, b.serial#,b.status,b.last_call_et/60.00 lastCallMin,
 b.machine, b.module, 
 --b.program, 
 a.client_charset , a.client_driver, 
