@@ -3,7 +3,7 @@ col username for a10;
 col client_version for a15;
 col osuser for a10;
 col machine for a15;
-col module for a20;
+col module for a10;
 col program for a15;
 col client_charset for a10;
 col client_driver for a10;
