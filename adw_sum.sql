@@ -21,7 +21,8 @@ col tablespace_name for a20;
 col file_name for a105;
 select tablespace_name,file_name from dba_data_files order by 1;
 --version
-select * from v$version;
+col banner_full for a79 heading VERION_FULL;
+select banner_full from v$version;
 --
 show parameter compatible;
 
