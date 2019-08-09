@@ -26,12 +26,12 @@ select * from v$version;
 show parameter compatible;
 
 --@pdb
-col name for a30;
+col name for a30 heading ADB_FULL_NAME;
 col open_mode for a20;
 col con_id for 999;
-col create_scn for 9999999999999999;
+col creation_TIME for a20 heading PROVISIONING_TIME;
 col total_size_MB for 999999;
-select con_id, name, open_mode,create_scn,total_size/1024/1024 total_size_MB,guid
+select con_id, name, open_mode,to_char(creation_time,'yyyy-mm-dd hh24:mi:ss') creation_time,total_size/1024/1024 total_size_MB,guid
 from v$pdbs;
 --
 --set timing off;
