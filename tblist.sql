@@ -22,12 +22,18 @@ col status for a15
 col LAST_ANALYZED for a20
 col partitioned for a10
 col tablespace_name like fmt_short
+col DML_TIMESTAMP for a20
+col created for a20
 SELECT 
 TABLE_NAME,
-STATUS,
+a.STATUS,
 LAST_ANALYZED,
 PARTITIONED,
-TABLESPACE_NAME
-FROM  user_tables 
+TABLESPACE_NAME,
+DML_TIMESTAMP,
+b.CREATED
+FROM  user_tables a, user_objects b
 WHERE table_name like UPPER('&table_name%')
+and a.table_name = b.object_name
+and b.object_type = 'TABLE'
 order by 1;
