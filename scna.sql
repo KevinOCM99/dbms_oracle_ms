@@ -4,10 +4,8 @@ col file# for 999
 col file_name for a50
 col CHECKPOINT_CHANGE# for 999999999999
 col last_change# for 999999999999
-with
-simple_path as (select substr(name,1,instr(name,'/',-1)) path_kk from v$datafile where file#=1)
 select a.file#
-, replace(a.name,d.path_kk,'') file_name
+, replace(a.name,substr(e.name,1,instr(e.name,'/',-1)),'') file_name
 , c.current_scn as curr_scn
 , c.checkpoint_change# as ckpt_scn
 , case when c.checkpoint_change# > a.checkpoint_change# then '>'
@@ -21,6 +19,7 @@ select a.file#
   end as s2
 , b.checkpoint_change# as start_scn
 , a.last_change# as stop_scn
-from v$datafile a, v$datafile_header b, v$database c, simple_path d
-where a.file# = b.file#
+from v$datafile a, v$datafile_header b, v$database c, v$datafile e
+where a.file# = b.file# and e.file#=1
 order by 2;
+
