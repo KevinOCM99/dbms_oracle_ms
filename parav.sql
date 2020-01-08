@@ -1,4 +1,5 @@
-
+--also can use view of 
+--select value from v$parameter_valid_values where name ='optimizer_features_enable' order by ORDINAL;
 COL pvalid_default HEAD DEFAULT FOR A7
 COL pvalid_value   HEAD VALUE   FOR A30
 COL pvalid_name    HEAD PARAMETER FOR A50
