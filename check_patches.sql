@@ -22,7 +22,7 @@ COLUMN status FORMAT A10
 COLUMN version FORMAT A10
 
 
-SELECT TO_CHAR(action_time, 'YYYY-MM-DD') AS action_time,
+SELECT TO_CHAR(action_time, 'YYYY-MM-DD HH24:MI:SS') AS action_time,
        action,
        namespace,
        version,
@@ -31,4 +31,11 @@ SELECT TO_CHAR(action_time, 'YYYY-MM-DD') AS action_time,
        bundle_series
 FROM   sys.registry$history
 ORDER by action_time;
+
+--
+col status for a10
+col action for a10
+col action_time for a30
+col description for a60
+select patch_id,patch_type,action,status,action_time,description from dba_registry_sqlpatch order by action_time;
 
