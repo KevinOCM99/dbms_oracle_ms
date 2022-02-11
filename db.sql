@@ -11,8 +11,9 @@ col instance for a20
 SELECT host_name,
        INSTANCE_NAME INSTANCE,
        sys_context('USERENV','DB_NAME') DB_NAME,
+       status,
        sys_context('USERENV', 'CURRENT_SCHEMA') user_name,
        sys_context('USERENV','HOST') terminal_name
-FROM V$INSTANCE;
+FROM GV$INSTANCE;
 
 @@ver
