@@ -1,3 +1,5 @@
+--every 3s repeat 100 times
+--@loop1 test.sql 3 100 
 set feed off
 set head off
 set echo off
