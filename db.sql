@@ -2,7 +2,7 @@
 -- Created by Junyi Liang 2010/9/17
 set lines 180
 col db_name format a15
-col host_name format a20
+col host_name format a27
 col user_name format a15
 col terminal_name format a30
 col instance for a12;
