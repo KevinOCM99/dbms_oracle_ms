@@ -17,6 +17,7 @@ begin
      --dbms_output.put_line(obj_name);
      --dbms_output.put_line(obj_type);
      dbms_output.put_line('---------------------------');
+     dbms_output.put_line('set serveroutput on;');
      dbms_output.put_line('set long 20000;');
      dbms_output.put_line('set lines 120;');
      dbms_output.put_line('col myoutput for a120;');
