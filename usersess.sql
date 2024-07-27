@@ -1,8 +1,8 @@
 set lines 999;
 col username for a20;
 col osuser for a15;
-col machine for a20;
-col program for a40;
+col machine for a25;
+col program for a45;
 col terminal for a20;
 col sess_id for a20;
 col resource_consumer_group for a15 heading CONSUMER_GROUP;
