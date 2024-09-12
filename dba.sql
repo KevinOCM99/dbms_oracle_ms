@@ -25,6 +25,6 @@ JOIN
 ON 
     i.INST_ID = d.INST_ID
 ORDER BY 
-    i.INSTANCE_ID;
+    i.INST_ID;
 
 @uptime
