@@ -9,7 +9,7 @@ col COMP_NAME for a45;
 col action_time for a30;
 col comments for a45;
 col action for a10;
-col version for a15;
+col version for a30;
 col BUNDLE_SERIES for a5 heading BS;
 col status for a15;
 col version_full for a15;
