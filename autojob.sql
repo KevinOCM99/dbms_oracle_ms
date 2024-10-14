@@ -2,6 +2,8 @@
 
 set lines 180 pages 999;
 
+@nls4mt
+
 col client_name for a40
 col task_name for a20
 col operation_name for a40
