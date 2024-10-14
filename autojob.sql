@@ -16,7 +16,7 @@ select client_name,status from dba_autotask_client order by 1;
 
 
 
-col COMMENTS for a80 
+col COMMENTS for a89 
 col program_type for a20
 col PROGRAM_NAME for a23;
 SELECT PROGRAM_NAME,PROGRAM_TYPE,ENABLED,COMMENTS FROM dba_scheduler_programs  WHERE PROGRAM_NAME in('GATHER_STATS_PROG','AUTO_SPACE_ADVISOR_PROG','AUTO_SQL_TUNING_PROG')
