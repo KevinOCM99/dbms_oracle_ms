@@ -7,7 +7,7 @@ set lines 180 pages 999;
 col client_name for a40
 col task_name for a20
 col operation_name for a40
-SELECT CLIENT_NAME,TASK_NAME,OPERATION_NAME,STATUS FROM dba_autotask_task;
+SELECT CLIENT_NAME,TASK_NAME,OPERATION_NAME,STATUS FROM dba_autotask_task order by 1;
 
 
 col client_name for a31;
@@ -29,7 +29,7 @@ col duration for a14;
 col open for a5;
 col LAST_START_DATE for a34;
 col NEXT_START_DATE for a34;
-SELECT a.WINDOW_NAME,a.duration,ENABLED OPEN,LAST_START_DATE,NEXT_START_DATE ,a.REPEAT_INTERVAL FROM dba_scheduler_windows a order by 1;
+SELECT a.WINDOW_NAME,a.duration,ENABLED OPEN,LAST_START_DATE,NEXT_START_DATE ,a.REPEAT_INTERVAL FROM dba_scheduler_windows a order by next_start_date;
 
 
 col window_name for a18;
@@ -40,4 +40,5 @@ col optimizer_stats for a15;
 col segment_advisor for a15;
 col sql_tune_advisor for a15;
 SELECT window_name, window_next_time, window_active, autotask_status, optimizer_stats, segment_advisor, sql_tune_advisor
-FROM dba_autotask_window_clients;
+FROM dba_autotask_window_clients
+order by window_next_time;
