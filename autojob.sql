@@ -5,7 +5,7 @@ set lines 180 pages 999;
 @nls4mt
 
 col client_name for a40
-col task_name for a20
+col task_name for a29
 col operation_name for a40
 SELECT CLIENT_NAME,TASK_NAME,OPERATION_NAME,STATUS FROM dba_autotask_task order by 1;
 
