@@ -20,7 +20,7 @@ begin
      dbms_output.put_line('---------------------------');
      dbms_output.put_line('set serveroutput on;');
      dbms_output.put_line('set long 20000;');
-     dbms_output.put_line('set lines 120;');
+     dbms_output.put_line('set lines 120 pages 999;');
      dbms_output.put_line('col myoutput for a120;');
      dbms_output.put_line('SELECT DBMS_METADATA.GET_DDL (''' || obj_type ||  ''',''' || obj_name || ''',''' || obj_owner || ''' ) myoutput FROM DUAL;');
      dbms_output.put_line('---------------------------');
