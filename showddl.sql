@@ -1,5 +1,6 @@
+set serveroutput on;
 set long 10000;
-set lines 120;
+set lines 120 pages 999;
 col myoutput for a120
 
 declare 
