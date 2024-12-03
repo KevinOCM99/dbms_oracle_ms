@@ -55,7 +55,7 @@ select ROLE
 from dba_roles
 where ROLE like UPPER('&table_name%')
 )
-order by 1;
+order by 2;
 
 prompt *************************Role privileges****************************
 
@@ -67,7 +67,7 @@ select ROLE
 from dba_roles
 where ROLE like UPPER('&table_name%')
 )
-order by 1;
+order by 2;
 
 prompt *************************Object privileges****************************
 
@@ -79,7 +79,7 @@ select ROLE
 from dba_roles
 where ROLE like UPPER('&table_name%')
 )
-order by 1,2,3;
+order by 2,3,4;
 
 
 
