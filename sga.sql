@@ -59,6 +59,3 @@ select component, user_specified_size, current_size, min_size, max_size, granule
 from v$memory_dynamic_components
 /
 
-select component, user_specified_size, current_size, min_size, max_size, granule_size
-from v$memory_dynamic_components
-/
