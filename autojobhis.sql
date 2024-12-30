@@ -13,7 +13,7 @@ col window_duration for a26;
 col JOB_DURATION for a20;
 col WINDOW_NAME for a20;
 col job_status for a15;
-col job_name for a6;
+col job_name for a6 heading CLIENT;
 
 
 
@@ -23,8 +23,9 @@ where trunc(window_start_time) >= sysdate-8
 --and client_name='auto optimizer stats collection'
 order by 1,2 desc;
 
-select case client_name when 'auto optimizer stats collection' then 'STATS' when 'auto space advisor' then 'STATS' when 'sql tuning advisor' then 'STATS' end job_name, job_start_time,job_status,window_name,window_start_time,window_duration,job_duration
+select case client_name when 'auto optimizer stats collection' then 'STATS' when 'auto space advisor' then 'SPACE' when 'sql tuning advisor' then 'TUNING' end job_name, job_start_time,job_status,window_name,window_start_time,window_duration,job_duration
 from DBA_AUTOTASK_JOB_HISTORY
 where trunc(job_start_time) >= sysdate-8 
 --and client_name='auto optimizer stats collection'
 order by 1,2 desc;
+
