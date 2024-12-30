@@ -24,7 +24,7 @@ where trunc(window_start_time) >= sysdate-8
 and client_name='auto optimizer stats collection'
 order by 1 desc;
 
-select case client_name when 'auto optimizer stats collection' then 'stats' when 'auto space advisor' then 'space' when 'sql tuning advisor' then 'tuning' end, job_start_time,job_status,window_name,window_start_time,window_duration,job_duration
+select case client_name when 'auto optimizer stats collection' then 'stats' when 'auto space advisor' then 'space' when 'sql tuning advisor' then 'tuning' end job_name, job_start_time,job_status,window_name,window_start_time,window_duration,job_duration
 from DBA_AUTOTASK_JOB_HISTORY
 where trunc(job_start_time) >= sysdate-8 
 --and client_name='auto optimizer stats collection'
