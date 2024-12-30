@@ -1,5 +1,4 @@
 
-
 set lines 180 pages 999;
 alter session set NLS_LANGUAGE='ENGLISH';
 alter session set NLS_DATE_FORMAT='YYYY-MM-DD HH24:MI:SS';
@@ -18,17 +17,14 @@ col job_name for a6;
 
 
 
-select window_start_time,jobs_completed,window_duration,window_end_time
+select  case client_name when 'auto optimizer stats collection' then 'STATS' when 'auto space advisor' then 'SPACE' when 'sql tuning advisor' then 'TUNING' end job_namewindow_start_time,jobs_completed,window_duration,window_end_time
 from DBA_AUTOTASK_CLIENT_HISTORY
 where trunc(window_start_time) >= sysdate-8 
-and client_name='auto optimizer stats collection'
-order by 1 desc;
+--and client_name='auto optimizer stats collection'
+order by 1,2 desc;
 
-select case client_name when 'auto optimizer stats collection' then 'stats' when 'auto space advisor' then 'space' when 'sql tuning advisor' then 'tuning' end job_name, job_start_time,job_status,window_name,window_start_time,window_duration,job_duration
+select case client_name when 'auto optimizer stats collection' then 'STATS' when 'auto space advisor' then 'STATS' when 'sql tuning advisor' then 'STATS' end job_name, job_start_time,job_status,window_name,window_start_time,window_duration,job_duration
 from DBA_AUTOTASK_JOB_HISTORY
 where trunc(job_start_time) >= sysdate-8 
 --and client_name='auto optimizer stats collection'
-order by JOB_START_TIME desc;
-
-
-
+order by 1,2 desc;
