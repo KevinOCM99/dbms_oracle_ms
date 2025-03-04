@@ -3,9 +3,9 @@ col sql for a120
 select 'alter ' 
      ||replace(object_type,'BODY','')
      ||' '
-     ||owner ||'.'
+     ||owner ||'."'
      ||object_name
-     ||' compile '
+     ||'" compile '
      ||decode(object_type,'PACKAGE BODY','BODY','')
      ||' ;' as sql
 from dba_objects
