@@ -1,6 +1,6 @@
 set lines 180 pages 999
 col inst_id for 99
-col group# for 99
+col group# for 999
 col THREAD# for 99
 col status for a15
 col ARCHIVED for a9
