@@ -1,5 +1,5 @@
 col inst_id for 999 heading INS
-col PID for a6
+col PID for a7
 col process for a5
 col client_pid for a7 heading C_PID
 col status for a9
