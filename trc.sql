@@ -6,6 +6,12 @@ select INST_ID,NAME,VALUE
 from V$DIAG_INFO
 where name = 'Diag Trace';
 
+col ALERT_FILE for a80
+SELECT value || '/alert_' || instance_name || '.log' AS alert_file
+FROM v$diag_info, v$instance
+WHERE v$diag_info.name='Diag Trace';
+
+
 SELECT VALUE FROM V$DIAG_INFO WHERE NAME = 'Default Trace File';
 
 col value for a120;
